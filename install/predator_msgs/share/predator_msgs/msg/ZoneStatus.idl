@@ -1,0 +1,40 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from predator_msgs/msg/ZoneStatus.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Point.idl"
+#include "std_msgs/msg/Header.idl"
+
+module predator_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "ZoneStatus.msg" "\n"
+      "Published by: zone_monitor_node" "\n"
+      "Consumed by: behavior_manager_node, arm_gesture_node")
+    struct ZoneStatus {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "True if target is within UR3 interaction region")
+      boolean target_in_ur3_zone;
+
+      @verbatim (language="comment", text=
+        "True if target is within minimum safe distance")
+      boolean target_in_safety_zone;
+
+      @verbatim (language="comment", text=
+        "Distance from target to UR3 zone center")
+      @unit (value="m")
+      float distance_to_zone_center;
+
+      @verbatim (language="comment", text=
+        "Configured radius of the UR3 interaction zone")
+      @unit (value="m")
+      float zone_radius;
+
+      @verbatim (language="comment", text=
+        "Center of the UR3 interaction zone in map frame")
+      geometry_msgs::msg::Point zone_center;
+    };
+  };
+};

@@ -1,0 +1,43 @@
+running egg_info
+creating ../../build/predator_perception/predator_perception.egg-info
+writing ../../build/predator_perception/predator_perception.egg-info/PKG-INFO
+writing dependency_links to ../../build/predator_perception/predator_perception.egg-info/dependency_links.txt
+writing entry points to ../../build/predator_perception/predator_perception.egg-info/entry_points.txt
+writing requirements to ../../build/predator_perception/predator_perception.egg-info/requires.txt
+writing top-level names to ../../build/predator_perception/predator_perception.egg-info/top_level.txt
+writing manifest file '../../build/predator_perception/predator_perception.egg-info/SOURCES.txt'
+reading manifest file '../../build/predator_perception/predator_perception.egg-info/SOURCES.txt'
+writing manifest file '../../build/predator_perception/predator_perception.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/roboticslab/Ros2_predator-project_WS/build/predator_perception/build
+creating /home/roboticslab/Ros2_predator-project_WS/build/predator_perception/build/lib
+creating /home/roboticslab/Ros2_predator-project_WS/build/predator_perception/build/lib/predator_perception
+copying predator_perception/zone_monitor_node.py -> /home/roboticslab/Ros2_predator-project_WS/build/predator_perception/build/lib/predator_perception
+copying predator_perception/__init__.py -> /home/roboticslab/Ros2_predator-project_WS/build/predator_perception/build/lib/predator_perception
+copying predator_perception/target_tracker_node.py -> /home/roboticslab/Ros2_predator-project_WS/build/predator_perception/build/lib/predator_perception
+copying predator_perception/velocity_estimator_node.py -> /home/roboticslab/Ros2_predator-project_WS/build/predator_perception/build/lib/predator_perception
+running install
+running install_lib
+creating /home/roboticslab/Ros2_predator-project_WS/install/predator_perception/lib/python3.12/site-packages/predator_perception
+copying /home/roboticslab/Ros2_predator-project_WS/build/predator_perception/build/lib/predator_perception/zone_monitor_node.py -> /home/roboticslab/Ros2_predator-project_WS/install/predator_perception/lib/python3.12/site-packages/predator_perception
+copying /home/roboticslab/Ros2_predator-project_WS/build/predator_perception/build/lib/predator_perception/__init__.py -> /home/roboticslab/Ros2_predator-project_WS/install/predator_perception/lib/python3.12/site-packages/predator_perception
+copying /home/roboticslab/Ros2_predator-project_WS/build/predator_perception/build/lib/predator_perception/target_tracker_node.py -> /home/roboticslab/Ros2_predator-project_WS/install/predator_perception/lib/python3.12/site-packages/predator_perception
+copying /home/roboticslab/Ros2_predator-project_WS/build/predator_perception/build/lib/predator_perception/velocity_estimator_node.py -> /home/roboticslab/Ros2_predator-project_WS/install/predator_perception/lib/python3.12/site-packages/predator_perception
+byte-compiling /home/roboticslab/Ros2_predator-project_WS/install/predator_perception/lib/python3.12/site-packages/predator_perception/zone_monitor_node.py to zone_monitor_node.cpython-312.pyc
+byte-compiling /home/roboticslab/Ros2_predator-project_WS/install/predator_perception/lib/python3.12/site-packages/predator_perception/__init__.py to __init__.cpython-312.pyc
+byte-compiling /home/roboticslab/Ros2_predator-project_WS/install/predator_perception/lib/python3.12/site-packages/predator_perception/target_tracker_node.py to target_tracker_node.cpython-312.pyc
+byte-compiling /home/roboticslab/Ros2_predator-project_WS/install/predator_perception/lib/python3.12/site-packages/predator_perception/velocity_estimator_node.py to velocity_estimator_node.cpython-312.pyc
+running install_data
+creating /home/roboticslab/Ros2_predator-project_WS/install/predator_perception/share/ament_index
+creating /home/roboticslab/Ros2_predator-project_WS/install/predator_perception/share/ament_index/resource_index
+creating /home/roboticslab/Ros2_predator-project_WS/install/predator_perception/share/ament_index/resource_index/packages
+copying resource/predator_perception -> /home/roboticslab/Ros2_predator-project_WS/install/predator_perception/share/ament_index/resource_index/packages
+copying package.xml -> /home/roboticslab/Ros2_predator-project_WS/install/predator_perception/share/predator_perception
+running install_egg_info
+Copying ../../build/predator_perception/predator_perception.egg-info to /home/roboticslab/Ros2_predator-project_WS/install/predator_perception/lib/python3.12/site-packages/predator_perception-0.0.0-py3.12.egg-info
+running install_scripts
+Installing target_tracker_node script to /home/roboticslab/Ros2_predator-project_WS/install/predator_perception/lib/predator_perception
+Installing velocity_estimator_node script to /home/roboticslab/Ros2_predator-project_WS/install/predator_perception/lib/predator_perception
+Installing zone_monitor_node script to /home/roboticslab/Ros2_predator-project_WS/install/predator_perception/lib/predator_perception
+writing list of installed files to '/home/roboticslab/Ros2_predator-project_WS/build/predator_perception/install.log'

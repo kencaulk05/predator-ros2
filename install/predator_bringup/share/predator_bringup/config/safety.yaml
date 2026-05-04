@@ -1,0 +1,6 @@
+safety_supervisor:
+  ros__parameters:
+    min_distance_m: 0.5         # Minimum safe distance between Turtlebot and target [m]
+    tracking_timeout_s: 2.0     # Max allowed gap between pose updates before UNSAFE [s]
+    min_confidence: 0.2         # Only check distance when confidence is above this
+    publish_rate_hz: 20.0       # Safety runs faster than other nodes

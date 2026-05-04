@@ -1,0 +1,44 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from predator_msgs/msg/BehaviorState.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module predator_msgs {
+  module msg {
+    module BehaviorState_Constants {
+      @verbatim (language="comment", text=
+        "State enum constants")
+      const uint8 SEARCH = 0;
+      const uint8 ACQUIRE = 1;
+      const uint8 PURSUIT = 2;
+      const uint8 HERD = 3;
+      const uint8 ARM_ALERT = 4;
+      const uint8 SAFETY_STOP = 5;
+      const uint8 REACQUIRE = 6;
+    };
+    @verbatim (language="comment", text=
+      "BehaviorState.msg" "\n"
+      "Published by: behavior_manager_node" "\n"
+      "Consumed by: pursuit_planner_node, arm_gesture_node, safety_supervisor_node")
+    struct BehaviorState {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "Current behavior state (use constants above)")
+      uint8 state;
+
+      @verbatim (language="comment", text=
+        "Human-readable state name for debugging")
+      string state_label;
+
+      @verbatim (language="comment", text=
+        "Seconds spent in current state")
+      float time_in_state;
+
+      @verbatim (language="comment", text=
+        "Why the last state transition occurred")
+      string transition_reason;
+    };
+  };
+};

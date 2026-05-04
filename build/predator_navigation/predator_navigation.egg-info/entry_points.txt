@@ -1,0 +1,2 @@
+[console_scripts]
+pursuit_planner_node = predator_navigation.pursuit_planner_node:main

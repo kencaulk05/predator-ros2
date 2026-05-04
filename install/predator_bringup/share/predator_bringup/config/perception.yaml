@@ -1,0 +1,26 @@
+# Camera driver parameters (v4l2_camera_node)
+camera:
+  ros__parameters:
+    video_device: "/dev/video0"   # Override at launch: camera_device:=/dev/video2
+    image_size: [1280, 720]       # Resolution [width, height] — lower if CPU is tight
+    camera_frame_id: "camera_optical_frame"
+    output_encoding: "yuv422_yuy2"
+    # camera_info_url: ""         # TODO: add calibration file path once camera is calibrated
+    #                               e.g. "file:///home/ken-lbv/camera_cal/camera.yaml"
+
+# Tracker parameters (target_tracker_node)
+target_tracker:
+  ros__parameters:
+    marker_id: 0              # ArUco marker ID on person's FRONT
+    marker_id_back: 1         # ArUco marker ID on person's BACK
+    marker_size_m: 0.15       # Physical side length of the marker [m]
+    filter_alpha: 0.3         # Low-pass filter coefficient [0-1], lower = smoother
+    aruco_dict: "DICT_4X4_50" # ArUco dictionary — must match printed markers
+
+# Velocity estimator parameters (velocity_estimator_node)
+velocity_estimator:
+  ros__parameters:
+    buffer_size: 10           # Number of poses kept in the circular buffer
+    prediction_horizon: 0.5   # How far ahead to predict position [s]
+    min_confidence: 0.3       # Ignore poses below this confidence threshold
+    min_dt: 0.01              # Minimum time between buffer updates [s]

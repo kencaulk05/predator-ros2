@@ -1,0 +1,14 @@
+{
+  "package_name": "predator_msgs",
+  "output_dir": "/home/roboticslab/Ros2_predator-project_WS/build/predator_msgs/rosidl_generator_type_description/predator_msgs",
+  "idl_tuples": [
+    "/home/roboticslab/Ros2_predator-project_WS/build/predator_msgs/rosidl_adapter/predator_msgs:msg/BehaviorState.idl",
+    "/home/roboticslab/Ros2_predator-project_WS/build/predator_msgs/rosidl_adapter/predator_msgs:msg/GestureRequest.idl",
+    "/home/roboticslab/Ros2_predator-project_WS/build/predator_msgs/rosidl_adapter/predator_msgs:msg/TargetState.idl",
+    "/home/roboticslab/Ros2_predator-project_WS/build/predator_msgs/rosidl_adapter/predator_msgs:msg/ZoneStatus.idl"
+  ],
+  "include_paths": [
+    "geometry_msgs:/opt/ros/kilted/share/geometry_msgs",
+    "std_msgs:/opt/ros/kilted/share/std_msgs"
+  ]
+}

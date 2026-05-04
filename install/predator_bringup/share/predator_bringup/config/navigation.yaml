@@ -1,0 +1,27 @@
+# navigation.yaml
+# Predator pursuit planner configuration
+# Map frame: origin = bottom-left of free space (0,0)
+# Keep ur3_zone_x/y in sync with zones.yaml
+
+pursuit_planner_node:
+  ros__parameters:
+    # UR3 arm position in map frame — must match zones.yaml
+    ur3_zone_x: 0.00          # m
+    ur3_zone_y: 1.29          # m
+
+    # Pursuit mode
+    intercept_offset_m: 1.0   # How far behind target to aim [m]
+    goal_recompute_threshold_m: 0.30  # Replan if target moves more than this [m]
+
+    # Herd mode
+    herding_offset_m: 0.80    # How far behind target (opposite UR3 side) [m]
+
+    # Standby position (center of bottom corridor)
+    standby_x: 1.40           # m
+    standby_y: 0.90           # m
+
+    # Map bounds for goal clamping
+    map_x_min: 0.10
+    map_x_max: 6.00
+    map_y_min: 0.10
+    map_y_max: 3.36

@@ -1,0 +1,3 @@
+[console_scripts]
+behavior_manager_node = predator_behavior.behavior_manager_node:main
+safety_supervisor_node = predator_behavior.safety_supervisor_node:main

@@ -1,0 +1,45 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from predator_msgs/msg/TargetState.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/PoseStamped.idl"
+#include "geometry_msgs/msg/TwistStamped.idl"
+#include "std_msgs/msg/Header.idl"
+
+module predator_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "TargetState.msg" "\n"
+      "Published by: target_tracker_node, velocity_estimator_node" "\n"
+      "Consumed by: behavior_manager_node, pursuit_planner_node, safety_supervisor_node")
+    struct TargetState {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "Current estimated pose in map frame")
+      geometry_msgs::msg::PoseStamped pose;
+
+      @verbatim (language="comment", text=
+        "Estimated linear + angular velocity")
+      geometry_msgs::msg::TwistStamped velocity;
+
+      @verbatim (language="comment", text=
+        "Short-horizon predicted position")
+      geometry_msgs::msg::PoseStamped predicted_pose;
+
+      @verbatim (language="comment", text=
+        "Tracking confidence")
+      @unit (value="0.0 - 1.0")
+      float confidence;
+
+      @verbatim (language="comment", text=
+        "True if target is actively tracked")
+      boolean is_tracked;
+
+      @verbatim (language="comment", text=
+        "Euclidean distance from robot base")
+      @unit (value="m")
+      float distance_to_robot;
+    };
+  };
+};

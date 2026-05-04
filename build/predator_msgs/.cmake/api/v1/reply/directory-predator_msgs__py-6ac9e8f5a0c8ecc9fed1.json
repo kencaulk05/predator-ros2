@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "predator_msgs__py",
+		"source" : "/home/roboticslab/Ros2_predator-project_WS/build/predator_msgs/predator_msgs__py"
+	}
+}

@@ -1,0 +1,41 @@
+running egg_info
+creating ../../build/predator_bringup/predator_bringup.egg-info
+writing ../../build/predator_bringup/predator_bringup.egg-info/PKG-INFO
+writing dependency_links to ../../build/predator_bringup/predator_bringup.egg-info/dependency_links.txt
+writing requirements to ../../build/predator_bringup/predator_bringup.egg-info/requires.txt
+writing top-level names to ../../build/predator_bringup/predator_bringup.egg-info/top_level.txt
+writing manifest file '../../build/predator_bringup/predator_bringup.egg-info/SOURCES.txt'
+reading manifest file '../../build/predator_bringup/predator_bringup.egg-info/SOURCES.txt'
+writing manifest file '../../build/predator_bringup/predator_bringup.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/roboticslab/Ros2_predator-project_WS/build/predator_bringup/build
+creating /home/roboticslab/Ros2_predator-project_WS/build/predator_bringup/build/lib
+creating /home/roboticslab/Ros2_predator-project_WS/build/predator_bringup/build/lib/predator_bringup
+copying predator_bringup/__init__.py -> /home/roboticslab/Ros2_predator-project_WS/build/predator_bringup/build/lib/predator_bringup
+running install
+running install_lib
+creating /home/roboticslab/Ros2_predator-project_WS/install/predator_bringup/lib/python3.12/site-packages/predator_bringup
+copying /home/roboticslab/Ros2_predator-project_WS/build/predator_bringup/build/lib/predator_bringup/__init__.py -> /home/roboticslab/Ros2_predator-project_WS/install/predator_bringup/lib/python3.12/site-packages/predator_bringup
+byte-compiling /home/roboticslab/Ros2_predator-project_WS/install/predator_bringup/lib/python3.12/site-packages/predator_bringup/__init__.py to __init__.cpython-312.pyc
+running install_data
+creating /home/roboticslab/Ros2_predator-project_WS/install/predator_bringup/share/ament_index
+creating /home/roboticslab/Ros2_predator-project_WS/install/predator_bringup/share/ament_index/resource_index
+creating /home/roboticslab/Ros2_predator-project_WS/install/predator_bringup/share/ament_index/resource_index/packages
+copying resource/predator_bringup -> /home/roboticslab/Ros2_predator-project_WS/install/predator_bringup/share/ament_index/resource_index/packages
+copying package.xml -> /home/roboticslab/Ros2_predator-project_WS/install/predator_bringup/share/predator_bringup
+creating /home/roboticslab/Ros2_predator-project_WS/install/predator_bringup/share/predator_bringup/launch
+copying launch/perception.launch.py -> /home/roboticslab/Ros2_predator-project_WS/install/predator_bringup/share/predator_bringup/launch
+copying launch/predator_system.launch.py -> /home/roboticslab/Ros2_predator-project_WS/install/predator_bringup/share/predator_bringup/launch
+creating /home/roboticslab/Ros2_predator-project_WS/install/predator_bringup/share/predator_bringup/config
+copying config/safety.yaml -> /home/roboticslab/Ros2_predator-project_WS/install/predator_bringup/share/predator_bringup/config
+copying config/manipulation.yaml -> /home/roboticslab/Ros2_predator-project_WS/install/predator_bringup/share/predator_bringup/config
+copying config/navigation.yaml -> /home/roboticslab/Ros2_predator-project_WS/install/predator_bringup/share/predator_bringup/config
+copying config/zones.yaml -> /home/roboticslab/Ros2_predator-project_WS/install/predator_bringup/share/predator_bringup/config
+copying config/behavior.yaml -> /home/roboticslab/Ros2_predator-project_WS/install/predator_bringup/share/predator_bringup/config
+copying config/perception.yaml -> /home/roboticslab/Ros2_predator-project_WS/install/predator_bringup/share/predator_bringup/config
+creating /home/roboticslab/Ros2_predator-project_WS/install/predator_bringup/share/predator_bringup/maps
+running install_egg_info
+Copying ../../build/predator_bringup/predator_bringup.egg-info to /home/roboticslab/Ros2_predator-project_WS/install/predator_bringup/lib/python3.12/site-packages/predator_bringup-0.0.0-py3.12.egg-info
+running install_scripts
+writing list of installed files to '/home/roboticslab/Ros2_predator-project_WS/build/predator_bringup/install.log'

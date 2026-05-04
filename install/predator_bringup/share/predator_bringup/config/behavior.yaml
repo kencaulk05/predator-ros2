@@ -1,0 +1,6 @@
+behavior_manager:
+  ros__parameters:
+    acquire_confidence_threshold: 0.6   # Confidence needed to transition SEARCH → ACQUIRE
+    lost_confidence_threshold: 0.2      # Below this → REACQUIRE
+    reacquire_timeout_s: 3.0            # Seconds in REACQUIRE before falling back to SEARCH
+    state_publish_rate_hz: 10.0         # How often to publish behavior state

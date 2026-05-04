@@ -1,0 +1,48 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from predator_msgs/msg/GestureRequest.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Point.idl"
+#include "std_msgs/msg/Header.idl"
+
+module predator_msgs {
+  module msg {
+    module GestureRequest_Constants {
+      @verbatim (language="comment", text=
+        "Gesture type enum constants")
+      const uint8 GESTURE_NONE = 0;
+      @verbatim (language="comment", text=
+        "\"Ready\" tracking posture")
+      const uint8 GESTURE_READY = 1;
+      @verbatim (language="comment", text=
+        "Point toward predicted intercept location")
+      const uint8 GESTURE_POINT = 2;
+      @verbatim (language="comment", text=
+        "Freeze / safety retreat posture")
+      const uint8 GESTURE_FREEZE = 3;
+      @verbatim (language="comment", text=
+        "Return to home/neutral position")
+      const uint8 GESTURE_RESET = 4;
+    };
+    @verbatim (language="comment", text=
+      "GestureRequest.msg" "\n"
+      "Published by: behavior_manager_node" "\n"
+      "Consumed by: arm_gesture_node")
+    struct GestureRequest {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "Requested gesture (use constants above)")
+      uint8 gesture_type;
+
+      @verbatim (language="comment", text=
+        "Used by GESTURE_POINT: world-frame target")
+      geometry_msgs::msg::Point target_point;
+
+      @verbatim (language="comment", text=
+        "Motion speed scale")
+      @unit (value="0.0 slow - 1.0 fast")
+      float urgency;
+    };
+  };
+};

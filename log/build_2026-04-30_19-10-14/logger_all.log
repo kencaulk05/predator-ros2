@@ -1,0 +1,192 @@
+[0.202s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'predator_manipulation']
+[0.202s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['predator_manipulation'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7b0a8c2f9b80>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7b0a8c2f98e0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7b0a8c2f98e0>>, mixin_verb=('build',))
+[0.265s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.265s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.265s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.265s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.265s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.266s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.266s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/roboticslab/Ros2_predator-project_WS'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_behavior) by extensions ['ignore', 'ignore_ament_install']
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_behavior) by extension 'ignore'
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_behavior) by extension 'ignore_ament_install'
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_behavior) by extensions ['colcon_pkg']
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_behavior) by extension 'colcon_pkg'
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_behavior) by extensions ['colcon_meta']
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_behavior) by extension 'colcon_meta'
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_behavior) by extensions ['ros']
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_behavior) by extension 'ros'
+[0.312s] DEBUG:colcon.colcon_core.package_identification:Package 'src/predator_behavior' with type 'ros.ament_python' and name 'predator_behavior'
+[0.312s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_bringup) by extension 'ignore'
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_bringup) by extension 'ignore_ament_install'
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_bringup) by extensions ['colcon_pkg']
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_bringup) by extension 'colcon_pkg'
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_bringup) by extensions ['colcon_meta']
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_bringup) by extension 'colcon_meta'
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_bringup) by extensions ['ros']
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_bringup) by extension 'ros'
+[0.314s] DEBUG:colcon.colcon_core.package_identification:Package 'src/predator_bringup' with type 'ros.ament_python' and name 'predator_bringup'
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_manipulation) by extensions ['ignore', 'ignore_ament_install']
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_manipulation) by extension 'ignore'
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_manipulation) by extension 'ignore_ament_install'
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_manipulation) by extensions ['colcon_pkg']
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_manipulation) by extension 'colcon_pkg'
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_manipulation) by extensions ['colcon_meta']
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_manipulation) by extension 'colcon_meta'
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_manipulation) by extensions ['ros']
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_manipulation) by extension 'ros'
+[0.315s] DEBUG:colcon.colcon_core.package_identification:Package 'src/predator_manipulation' with type 'ros.ament_python' and name 'predator_manipulation'
+[0.315s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.315s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_msgs) by extension 'ignore'
+[0.315s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_msgs) by extension 'ignore_ament_install'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_msgs) by extensions ['colcon_pkg']
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_msgs) by extension 'colcon_pkg'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_msgs) by extensions ['colcon_meta']
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_msgs) by extension 'colcon_meta'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_msgs) by extensions ['ros']
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_msgs) by extension 'ros'
+[0.317s] DEBUG:colcon.colcon_core.package_identification:Package 'src/predator_msgs' with type 'ros.ament_cmake' and name 'predator_msgs'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_navigation) by extensions ['ignore', 'ignore_ament_install']
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_navigation) by extension 'ignore'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_navigation) by extension 'ignore_ament_install'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_navigation) by extensions ['colcon_pkg']
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_navigation) by extension 'colcon_pkg'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_navigation) by extensions ['colcon_meta']
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_navigation) by extension 'colcon_meta'
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_navigation) by extensions ['ros']
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_navigation) by extension 'ros'
+[0.318s] DEBUG:colcon.colcon_core.package_identification:Package 'src/predator_navigation' with type 'ros.ament_python' and name 'predator_navigation'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_perception) by extensions ['ignore', 'ignore_ament_install']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_perception) by extension 'ignore'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_perception) by extension 'ignore_ament_install'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_perception) by extensions ['colcon_pkg']
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_perception) by extension 'colcon_pkg'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_perception) by extensions ['colcon_meta']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_perception) by extension 'colcon_meta'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_perception) by extensions ['ros']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_perception) by extension 'ros'
+[0.319s] DEBUG:colcon.colcon_core.package_identification:Package 'src/predator_perception' with type 'ros.ament_python' and name 'predator_perception'
+[0.319s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.320s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.320s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.320s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.320s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.349s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'predator_msgs' in 'src/predator_msgs'
+[0.349s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'predator_behavior' in 'src/predator_behavior'
+[0.349s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'predator_navigation' in 'src/predator_navigation'
+[0.349s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'predator_perception' in 'src/predator_perception'
+[0.349s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'predator_bringup' in 'src/predator_bringup'
+[0.350s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.350s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.358s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 6 installed packages in /home/roboticslab/Ros2_predator-project_WS/install
+[0.362s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 75 installed packages in /home/roboticslab/ros2_ws/install
+[0.367s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 509 installed packages in /opt/ros/kilted
+[0.371s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.509s] WARNING:colcon.colcon_core.package_selection:Some selected packages are already built in one or more underlay workspaces:
+	'predator_manipulation' is in: /home/roboticslab/Ros2_predator-project_WS/install/predator_manipulation
+If a package in a merged underlay workspace is overridden and it installs headers, then all packages in the overlay must sort their include directories by workspace order. Failure to do so may result in build failures or undefined behavior at run time.
+If the overridden package is used by another package in any underlay, then the overriding package in the overlay must be API and ABI compatible or undefined behavior at run time may occur.
+
+If you understand the risks and want to override a package anyways, add the following to the command line:
+	--allow-overriding predator_manipulation
+
+This may be promoted to an error in a future release of colcon-override-check.
+[0.512s] Level 5:colcon.colcon_core.verb:set package 'predator_manipulation' build argument 'cmake_args' from command line to 'None'
+[0.512s] Level 5:colcon.colcon_core.verb:set package 'predator_manipulation' build argument 'cmake_target' from command line to 'None'
+[0.512s] Level 5:colcon.colcon_core.verb:set package 'predator_manipulation' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.512s] Level 5:colcon.colcon_core.verb:set package 'predator_manipulation' build argument 'cmake_clean_cache' from command line to 'False'
+[0.512s] Level 5:colcon.colcon_core.verb:set package 'predator_manipulation' build argument 'cmake_clean_first' from command line to 'False'
+[0.512s] Level 5:colcon.colcon_core.verb:set package 'predator_manipulation' build argument 'cmake_force_configure' from command line to 'False'
+[0.512s] Level 5:colcon.colcon_core.verb:set package 'predator_manipulation' build argument 'ament_cmake_args' from command line to 'None'
+[0.512s] Level 5:colcon.colcon_core.verb:set package 'predator_manipulation' build argument 'catkin_cmake_args' from command line to 'None'
+[0.512s] Level 5:colcon.colcon_core.verb:set package 'predator_manipulation' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.512s] DEBUG:colcon.colcon_core.verb:Building package 'predator_manipulation' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/roboticslab/Ros2_predator-project_WS/build/predator_manipulation', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/roboticslab/Ros2_predator-project_WS/install/predator_manipulation', 'merge_install': False, 'path': '/home/roboticslab/Ros2_predator-project_WS/src/predator_manipulation', 'symlink_install': False, 'test_result_base': None}
+[0.512s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.514s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.514s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/roboticslab/Ros2_predator-project_WS/src/predator_manipulation' with build type 'ament_python'
+[0.514s] Level 1:colcon.colcon_core.shell:create_environment_hook('predator_manipulation', 'ament_prefix_path')
+[0.518s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.518s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/roboticslab/Ros2_predator-project_WS/install/predator_manipulation/share/predator_manipulation/hook/ament_prefix_path.ps1'
+[0.519s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/roboticslab/Ros2_predator-project_WS/install/predator_manipulation/share/predator_manipulation/hook/ament_prefix_path.dsv'
+[0.519s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/roboticslab/Ros2_predator-project_WS/install/predator_manipulation/share/predator_manipulation/hook/ament_prefix_path.sh'
+[0.521s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.521s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.011s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/roboticslab/Ros2_predator-project_WS/src/predator_manipulation'
+[1.011s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.011s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.335s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/roboticslab/Ros2_predator-project_WS/src/predator_manipulation': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/roboticslab/Ros2_predator-project_WS/build/predator_manipulation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/roboticslab/Ros2_predator-project_WS/install/predator_manipulation/lib/python3.12/site-packages:/home/roboticslab/Ros2_predator-project_WS/install/predator_msgs/lib/python3.12/site-packages:/home/roboticslab/Ros2_predator-project_WS/install/predator_bringup/lib/python3.12/site-packages:/home/roboticslab/Ros2_predator-project_WS/install/predator_perception/lib/python3.12/site-packages:/home/roboticslab/Ros2_predator-project_WS/install/predator_navigation/lib/python3.12/site-packages:/home/roboticslab/Ros2_predator-project_WS/install/predator_manipulation/lib/python3.12/site-packages:/home/roboticslab/Ros2_predator-project_WS/install/predator_behavior/lib/python3.12/site-packages:/home/roboticslab/ros2_ws/install/moveit_task_constructor_core/lib/python3.12/site-packages:/home/roboticslab/ros2_ws/install/robo_waiter/lib/python3.12/site-packages:/home/roboticslab/ros2_ws/install/robo_chef/lib/python3.12/site-packages:/home/roboticslab/ros2_ws/install/roboChef/lib/python3.12/site-packages:/home/roboticslab/ros2_ws/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:/home/roboticslab/ros2_ws/install/moveit_py/lib/python3.12/site-packages:/home/roboticslab/ros2_ws/install/moveit_msgs/lib/python3.12/site-packages:/home/roboticslab/ros2_ws/build/moveit_configs_utils:/home/roboticslab/ros2_ws/install/moveit_configs_utils/lib/python3.12/site-packages:/opt/ros/kilted/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/predator_manipulation build --build-base /home/roboticslab/Ros2_predator-project_WS/build/predator_manipulation/build install --record /home/roboticslab/Ros2_predator-project_WS/build/predator_manipulation/install.log --single-version-externally-managed install_data
+[3.649s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/roboticslab/Ros2_predator-project_WS/src/predator_manipulation' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/roboticslab/Ros2_predator-project_WS/build/predator_manipulation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/roboticslab/Ros2_predator-project_WS/install/predator_manipulation/lib/python3.12/site-packages:/home/roboticslab/Ros2_predator-project_WS/install/predator_msgs/lib/python3.12/site-packages:/home/roboticslab/Ros2_predator-project_WS/install/predator_bringup/lib/python3.12/site-packages:/home/roboticslab/Ros2_predator-project_WS/install/predator_perception/lib/python3.12/site-packages:/home/roboticslab/Ros2_predator-project_WS/install/predator_navigation/lib/python3.12/site-packages:/home/roboticslab/Ros2_predator-project_WS/install/predator_manipulation/lib/python3.12/site-packages:/home/roboticslab/Ros2_predator-project_WS/install/predator_behavior/lib/python3.12/site-packages:/home/roboticslab/ros2_ws/install/moveit_task_constructor_core/lib/python3.12/site-packages:/home/roboticslab/ros2_ws/install/robo_waiter/lib/python3.12/site-packages:/home/roboticslab/ros2_ws/install/robo_chef/lib/python3.12/site-packages:/home/roboticslab/ros2_ws/install/roboChef/lib/python3.12/site-packages:/home/roboticslab/ros2_ws/install/moveit_task_constructor_msgs/lib/python3.12/site-packages:/home/roboticslab/ros2_ws/install/moveit_py/lib/python3.12/site-packages:/home/roboticslab/ros2_ws/install/moveit_msgs/lib/python3.12/site-packages:/home/roboticslab/ros2_ws/build/moveit_configs_utils:/home/roboticslab/ros2_ws/install/moveit_configs_utils/lib/python3.12/site-packages:/opt/ros/kilted/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/predator_manipulation build --build-base /home/roboticslab/Ros2_predator-project_WS/build/predator_manipulation/build install --record /home/roboticslab/Ros2_predator-project_WS/build/predator_manipulation/install.log --single-version-externally-managed install_data
+[3.654s] Level 1:colcon.colcon_core.environment:checking '/home/roboticslab/Ros2_predator-project_WS/install/predator_manipulation' for CMake module files
+[3.655s] Level 1:colcon.colcon_core.environment:checking '/home/roboticslab/Ros2_predator-project_WS/install/predator_manipulation' for CMake config files
+[3.656s] Level 1:colcon.colcon_core.environment:checking '/home/roboticslab/Ros2_predator-project_WS/install/predator_manipulation/lib'
+[3.657s] Level 1:colcon.colcon_core.environment:checking '/home/roboticslab/Ros2_predator-project_WS/install/predator_manipulation/bin'
+[3.657s] Level 1:colcon.colcon_core.environment:checking '/home/roboticslab/Ros2_predator-project_WS/install/predator_manipulation/lib/pkgconfig/predator_manipulation.pc'
+[3.657s] Level 1:colcon.colcon_core.environment:checking '/home/roboticslab/Ros2_predator-project_WS/install/predator_manipulation/lib/python3.12/site-packages'
+[3.657s] Level 1:colcon.colcon_core.shell:create_environment_hook('predator_manipulation', 'pythonpath')
+[3.658s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/roboticslab/Ros2_predator-project_WS/install/predator_manipulation/share/predator_manipulation/hook/pythonpath.ps1'
+[3.659s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/roboticslab/Ros2_predator-project_WS/install/predator_manipulation/share/predator_manipulation/hook/pythonpath.dsv'
+[3.660s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/roboticslab/Ros2_predator-project_WS/install/predator_manipulation/share/predator_manipulation/hook/pythonpath.sh'
+[3.662s] Level 1:colcon.colcon_core.environment:checking '/home/roboticslab/Ros2_predator-project_WS/install/predator_manipulation/bin'
+[3.662s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(predator_manipulation)
+[3.662s] INFO:colcon.colcon_core.shell:Creating package script '/home/roboticslab/Ros2_predator-project_WS/install/predator_manipulation/share/predator_manipulation/package.ps1'
+[3.665s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/roboticslab/Ros2_predator-project_WS/install/predator_manipulation/share/predator_manipulation/package.dsv'
+[3.666s] INFO:colcon.colcon_core.shell:Creating package script '/home/roboticslab/Ros2_predator-project_WS/install/predator_manipulation/share/predator_manipulation/package.sh'
+[3.667s] INFO:colcon.colcon_core.shell:Creating package script '/home/roboticslab/Ros2_predator-project_WS/install/predator_manipulation/share/predator_manipulation/package.bash'
+[3.668s] INFO:colcon.colcon_core.shell:Creating package script '/home/roboticslab/Ros2_predator-project_WS/install/predator_manipulation/share/predator_manipulation/package.zsh'
+[3.669s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/roboticslab/Ros2_predator-project_WS/install/predator_manipulation/share/colcon-core/packages/predator_manipulation)
+[3.669s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[3.670s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[3.670s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[3.670s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[3.681s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[3.681s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[3.682s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[3.707s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[3.707s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/roboticslab/Ros2_predator-project_WS/install/local_setup.ps1'
+[3.708s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/roboticslab/Ros2_predator-project_WS/install/_local_setup_util_ps1.py'
+[3.711s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/roboticslab/Ros2_predator-project_WS/install/setup.ps1'
+[3.719s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/roboticslab/Ros2_predator-project_WS/install/local_setup.sh'
+[3.720s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/roboticslab/Ros2_predator-project_WS/install/_local_setup_util_sh.py'
+[3.721s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/roboticslab/Ros2_predator-project_WS/install/setup.sh'
+[3.729s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/roboticslab/Ros2_predator-project_WS/install/local_setup.bash'
+[3.730s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/roboticslab/Ros2_predator-project_WS/install/setup.bash'
+[3.737s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/roboticslab/Ros2_predator-project_WS/install/local_setup.zsh'
+[3.737s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/roboticslab/Ros2_predator-project_WS/install/setup.zsh'

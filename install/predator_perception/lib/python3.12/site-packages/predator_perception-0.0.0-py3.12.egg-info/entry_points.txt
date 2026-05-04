@@ -1,0 +1,5 @@
+[console_scripts]
+camera_to_map_transform_node = predator_perception.camera_to_map_transform_node:main
+target_tracker_node = predator_perception.target_tracker_node:main
+velocity_estimator_node = predator_perception.velocity_estimator_node:main
+zone_monitor_node = predator_perception.zone_monitor_node:main

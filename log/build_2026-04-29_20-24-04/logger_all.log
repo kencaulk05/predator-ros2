@@ -1,0 +1,122 @@
+[8.637s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'predator_perception']
+[8.637s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['predator_perception'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x71b6c54ec920>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x71b6c54ec620>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x71b6c54ec620>>, mixin_verb=('build',))
+[8.733s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[8.733s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[8.733s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[8.733s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[8.733s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[8.734s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[8.734s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/roboticslab/Ros2_predator-project_WS'
+[8.734s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[8.734s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[8.734s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[8.734s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[8.734s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[8.734s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[8.734s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[8.734s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[8.734s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[8.763s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[8.763s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[8.763s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[8.764s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[8.764s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[8.764s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[8.764s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[8.764s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[8.764s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[8.764s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[8.764s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[8.764s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[8.764s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[8.764s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[8.765s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[8.765s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[8.765s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[8.765s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[8.765s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[8.765s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[8.765s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[8.765s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[8.765s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[8.765s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[8.765s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[8.765s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[8.765s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[8.765s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[8.765s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_behavior) by extensions ['ignore', 'ignore_ament_install']
+[8.766s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_behavior) by extension 'ignore'
+[8.766s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_behavior) by extension 'ignore_ament_install'
+[8.766s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_behavior) by extensions ['colcon_pkg']
+[8.766s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_behavior) by extension 'colcon_pkg'
+[8.766s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_behavior) by extensions ['colcon_meta']
+[8.766s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_behavior) by extension 'colcon_meta'
+[8.766s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_behavior) by extensions ['ros']
+[8.766s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_behavior) by extension 'ros'
+[8.768s] DEBUG:colcon.colcon_core.package_identification:Package 'src/predator_behavior' with type 'ros.ament_python' and name 'predator_behavior'
+[8.768s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_bringup) by extensions ['ignore', 'ignore_ament_install']
+[8.768s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_bringup) by extension 'ignore'
+[8.769s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_bringup) by extension 'ignore_ament_install'
+[8.769s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_bringup) by extensions ['colcon_pkg']
+[8.769s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_bringup) by extension 'colcon_pkg'
+[8.769s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_bringup) by extensions ['colcon_meta']
+[8.769s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_bringup) by extension 'colcon_meta'
+[8.769s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_bringup) by extensions ['ros']
+[8.769s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_bringup) by extension 'ros'
+[8.769s] DEBUG:colcon.colcon_core.package_identification:Package 'src/predator_bringup' with type 'ros.ament_python' and name 'predator_bringup'
+[8.769s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_manipulation) by extensions ['ignore', 'ignore_ament_install']
+[8.769s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_manipulation) by extension 'ignore'
+[8.770s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_manipulation) by extension 'ignore_ament_install'
+[8.770s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_manipulation) by extensions ['colcon_pkg']
+[8.770s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_manipulation) by extension 'colcon_pkg'
+[8.770s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_manipulation) by extensions ['colcon_meta']
+[8.770s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_manipulation) by extension 'colcon_meta'
+[8.770s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_manipulation) by extensions ['ros']
+[8.770s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_manipulation) by extension 'ros'
+[8.770s] DEBUG:colcon.colcon_core.package_identification:Package 'src/predator_manipulation' with type 'ros.ament_python' and name 'predator_manipulation'
+[8.770s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_msgs) by extensions ['ignore', 'ignore_ament_install']
+[8.770s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_msgs) by extension 'ignore'
+[8.771s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_msgs) by extension 'ignore_ament_install'
+[8.771s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_msgs) by extensions ['colcon_pkg']
+[8.771s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_msgs) by extension 'colcon_pkg'
+[8.771s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_msgs) by extensions ['colcon_meta']
+[8.771s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_msgs) by extension 'colcon_meta'
+[8.771s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_msgs) by extensions ['ros']
+[8.771s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_msgs) by extension 'ros'
+[8.771s] DEBUG:colcon.colcon_core.package_identification:Package 'src/predator_msgs' with type 'ros.ament_cmake' and name 'predator_msgs'
+[8.771s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_navigation) by extensions ['ignore', 'ignore_ament_install']
+[8.771s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_navigation) by extension 'ignore'
+[8.772s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_navigation) by extension 'ignore_ament_install'
+[8.772s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_navigation) by extensions ['colcon_pkg']
+[8.772s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_navigation) by extension 'colcon_pkg'
+[8.772s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_navigation) by extensions ['colcon_meta']
+[8.772s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_navigation) by extension 'colcon_meta'
+[8.772s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_navigation) by extensions ['ros']
+[8.772s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_navigation) by extension 'ros'
+[8.772s] DEBUG:colcon.colcon_core.package_identification:Package 'src/predator_navigation' with type 'ros.ament_python' and name 'predator_navigation'
+[8.772s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_perception) by extensions ['ignore', 'ignore_ament_install']
+[8.773s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_perception) by extension 'ignore'
+[8.773s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_perception) by extension 'ignore_ament_install'
+[8.773s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_perception) by extensions ['colcon_pkg']
+[8.773s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_perception) by extension 'colcon_pkg'
+[8.773s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_perception) by extensions ['colcon_meta']
+[8.773s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_perception) by extension 'colcon_meta'
+[8.773s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_perception) by extensions ['ros']
+[8.773s] Level 1:colcon.colcon_core.package_identification:_identify(src/predator_perception) by extension 'ros'
+[8.773s] DEBUG:colcon.colcon_core.package_identification:Package 'src/predator_perception' with type 'ros.ament_python' and name 'predator_perception'
+[8.773s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[8.774s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[8.774s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[8.774s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[8.774s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[8.926s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'predator_msgs' in 'src/predator_msgs'
+[8.926s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'predator_behavior' in 'src/predator_behavior'
+[8.926s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'predator_manipulation' in 'src/predator_manipulation'
+[8.926s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'predator_navigation' in 'src/predator_navigation'
+[8.927s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'predator_bringup' in 'src/predator_bringup'
+[8.934s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[8.934s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[11.610s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 6 installed packages in /home/roboticslab/Ros2_predator-project_WS/install
+[11.636s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 73 installed packages in /home/roboticslab/ros2_ws/install
+[11.640s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 502 installed packages in /opt/ros/kilted
+[11.643s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults

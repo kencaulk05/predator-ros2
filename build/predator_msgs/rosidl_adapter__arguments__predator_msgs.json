@@ -1,0 +1,9 @@
+{
+  "package_name": "predator_msgs",
+  "non_idl_tuples": [
+    "/home/roboticslab/Ros2_predator-project_WS/src/predator_msgs:msg/BehaviorState.msg",
+    "/home/roboticslab/Ros2_predator-project_WS/src/predator_msgs:msg/GestureRequest.msg",
+    "/home/roboticslab/Ros2_predator-project_WS/src/predator_msgs:msg/TargetState.msg",
+    "/home/roboticslab/Ros2_predator-project_WS/src/predator_msgs:msg/ZoneStatus.msg"
+  ]
+}

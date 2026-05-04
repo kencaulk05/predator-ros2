@@ -1,0 +1,2 @@
+[console_scripts]
+arm_gesture_node = predator_manipulation.arm_gesture_node:main
