@@ -2,5 +2,5 @@ zone_monitor:
   ros__parameters:
     ur3_zone_center_x: 0.0
     ur3_zone_center_y: 1.29
-    ur3_zone_radius: 1.20
+    ur3_zone_radius: 1.60
     safety_zone_radius: 0.90

@@ -1,0 +1,19 @@
+running egg_info
+writing ../../build/predator_navigation/predator_navigation.egg-info/PKG-INFO
+writing dependency_links to ../../build/predator_navigation/predator_navigation.egg-info/dependency_links.txt
+writing entry points to ../../build/predator_navigation/predator_navigation.egg-info/entry_points.txt
+writing requirements to ../../build/predator_navigation/predator_navigation.egg-info/requires.txt
+writing top-level names to ../../build/predator_navigation/predator_navigation.egg-info/top_level.txt
+reading manifest file '../../build/predator_navigation/predator_navigation.egg-info/SOURCES.txt'
+writing manifest file '../../build/predator_navigation/predator_navigation.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/home/roboticslab/Ros2_predator-project_WS/install/predator_navigation/lib/python3.12/site-packages/predator_navigation-0.0.0-py3.12.egg-info' (and everything under it)
+Copying ../../build/predator_navigation/predator_navigation.egg-info to /home/roboticslab/Ros2_predator-project_WS/install/predator_navigation/lib/python3.12/site-packages/predator_navigation-0.0.0-py3.12.egg-info
+running install_scripts
+Installing pursuit_planner_node script to /home/roboticslab/Ros2_predator-project_WS/install/predator_navigation/lib/predator_navigation
+writing list of installed files to '/home/roboticslab/Ros2_predator-project_WS/build/predator_navigation/install.log'

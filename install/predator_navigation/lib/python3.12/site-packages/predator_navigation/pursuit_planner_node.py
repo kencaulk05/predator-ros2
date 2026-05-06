@@ -67,7 +67,7 @@ class PursuitPlannerNode(Node):
     UR3_X            = 0.00   # m — UR3 arm x in map frame
     UR3_Y            = 1.29   # m — UR3 arm y in map frame
 
-    ROBOT_STANDBY_X  = 1.59   # m — standby x (center of bottom corridor)
+    ROBOT_STANDBY_X  = 2.75   # m — standby x (center of bottom corridor)
     ROBOT_STANDBY_Y  = 1.80   # m — standby y (center of bottom corridor)
 
     # Map bounds for clamping goals

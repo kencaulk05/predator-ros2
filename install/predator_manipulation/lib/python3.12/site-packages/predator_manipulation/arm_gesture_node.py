@@ -6,7 +6,7 @@ Uses the RobotMover pattern from the Tufts EECS UR3e lab guide.
 
 Subscriptions:
   /gesture_request          (predator_msgs/GestureRequest)
-  /predicted_target_pose    (geometry_msgs/PoseStamped)
+  /predicted_target_pose_map    (geometry_msgs/PoseStamped)
 
 Publications:
   /gesture_status           (std_msgs/String)
@@ -20,7 +20,6 @@ IMPORTANT: Requires CycloneDDS to be active:
 """
 
 import math
-import time
 
 import rclpy
 from rclpy.node import Node
@@ -88,8 +87,8 @@ class ArmGestureController(Node):
         super().__init__("arm_gesture_node")
 
         # ── Parameters ────────────────────────────────────────────────────
-        self.declare_parameter("velocity_scale",     0.3)
-        self.declare_parameter("acceleration_scale", 0.3)
+        self.declare_parameter("velocity_scale",     0.6)
+        self.declare_parameter("acceleration_scale", 0.5)
 
         self._vel_scale  = self.get_parameter("velocity_scale").value
         self._acc_scale  = self.get_parameter("acceleration_scale").value
@@ -118,7 +117,7 @@ class ArmGestureController(Node):
             GestureRequest, "/gesture_request",       self._gesture_cb, 10
         )
         self.create_subscription(
-            PoseStamped,    "/predicted_target_pose", self._pose_cb,    10
+            PoseStamped,    "/predicted_target_pose_map", self._pose_cb,    10
         )
 
         self.get_logger().info("ArmGestureController ready.")
@@ -136,11 +135,14 @@ class ArmGestureController(Node):
             return
 
         if self._executing:
-            self.get_logger().warn(
-                "Gesture request ignored — still executing previous gesture.",
-                throttle_duration_sec=1.0
-            )
-            return
+            # Allow POINT to interrupt only if already executing POINT
+            if msg.gesture_type == GESTURE_POINT and                self._current_gesture == GESTURE_POINT:
+                self.get_logger().info("Updating POINT target.")
+                self._executing = False
+            else:
+                self.get_logger().warn(
+                    "Gesture request ignored — still executing previous gesture.")
+                return
 
         self._current_gesture = msg.gesture_type
         label   = GESTURE_LABELS.get(msg.gesture_type, "UNKNOWN")
@@ -174,6 +176,11 @@ class ArmGestureController(Node):
                 target = self._predicted_target_pos
 
             if target is not None:
+                # Convert map frame → UR3 base_link frame
+                # UR3 is at map (0.0, 1.29), facing +X in map = +Y in base_link
+                # base_link frame: +X = forward (into arena = map +X)
+                #                  +Y = left (map +Y direction)
+                target = self._map_to_base_link(target)
                 point_pose = self._compute_point_pose(target)
                 if point_pose is not None:
                     self._move_to_pose("POINT", point_pose, vel, accel)
@@ -257,6 +264,36 @@ class ArmGestureController(Node):
             )
         self._executing = False
 
+    # ── Coordinate transform ──────────────────────────────────────────────────
+
+    def _map_to_base_link(self, target_map: tuple) -> tuple:
+        """
+        Convert a point from map frame to UR3e base_link frame.
+
+        UR3 position in map frame: (0.0, 1.29, 0.9)
+        UR3 orientation: arm faces +X direction in map frame
+        base_link axes relative to map:
+          base_link +X = map +X (forward into arena)
+          base_link +Y = map +Y (left)
+          base_link +Z = map +Z (up)
+
+        So the transform is simply a translation by the UR3 position.
+        The person is on the floor (z=0 in map) but the arm base is ~0.9m high.
+        """
+        # UR3 base position in map frame
+        UR3_MAP_X = 0.0
+        UR3_MAP_Y = 1.29
+        UR3_BASE_HEIGHT = 0.9  # height of arm base above floor in meters
+
+        mx, my, mz = target_map
+
+        # Translate to base_link origin
+        bx = mx - UR3_MAP_X
+        by = my - UR3_MAP_Y
+        bz = mz - UR3_BASE_HEIGHT  # person is on floor, arm base is elevated
+
+        return (bx, by, bz)
+
     # ── POINT geometry ─────────────────────────────────────────────────────
 
     def _compute_point_pose(self, target_world: tuple) -> list | None:
@@ -270,7 +307,15 @@ class ArmGestureController(Node):
         tx, ty, tz = target_world
 
         # Shoulder pan: rotate base to face target in XY plane
-        pan_angle = math.atan2(ty, tx)
+        # UR3 base joint rotates opposite to map Y axis — negate ty
+        # Offset of 113.87° calibrated: base=103.55° points to map (2.80,1.80)
+        PAN_OFFSET = math.radians(113.87)
+        pan_angle = math.atan2(-ty, tx) + PAN_OFFSET
+        # Normalize to [-pi, pi]
+        while pan_angle > math.pi:
+            pan_angle -= 2 * math.pi
+        while pan_angle < -math.pi:
+            pan_angle += 2 * math.pi
 
         # Distance in XY plane
         dist_xy = math.sqrt(tx**2 + ty**2)
