@@ -24,3 +24,14 @@ velocity_estimator:
     prediction_horizon: 0.5   # How far ahead to predict position [s]
     min_confidence: 0.3       # Ignore poses below this confidence threshold
     min_dt: 0.01              # Minimum time between buffer updates [s]
+
+# Camera-to-map transform parameters (camera_to_map_transform_node)
+camera_to_map_transform:
+  ros__parameters:
+    camera_x: 0.20          # m — camera position along map +X from origin
+    camera_y: 1.00          # m — camera position along map +Y from origin
+    camera_z: 2.00          # m — camera height above floor
+    camera_tilt_deg: 30.0   # degrees — downward tilt angle
+    camera_yaw_deg: 12.0    # degrees — pan angle in map frame (0=facing +X)
+    floor_z: 0.0            # m — floor height in map frame
+    debug_transform: false  # set true to log each transform

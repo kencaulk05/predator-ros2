@@ -66,7 +66,6 @@ class ZoneMonitor(Node):
         else:
             target_2d = self._latest_pose[:2]
             dist_to_ur3   = float(np.linalg.norm(target_2d - self._ur3_zone_center))
-            dist_to_robot = float(np.linalg.norm(target_2d))  # robot at origin
 
             msg.distance_to_zone_center  = dist_to_ur3
             msg.target_in_ur3_zone       = dist_to_ur3   <= self._ur3_zone_radius

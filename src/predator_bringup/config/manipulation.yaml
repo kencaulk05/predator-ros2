@@ -4,4 +4,4 @@ arm_gesture:
     ready_pose_name: "ready"          # Named state in the SRDF for tracking posture
     home_pose_name: "home"            # Named state for neutral/retracted position
     point_z_offset: 1.25              # Vertical offset when computing pointing pose [m]
-    velocity_scale: 0.3              # Default MoveIt velocity scaling [0.0 - 1.0]
+    velocity_scale: 0.6              # Default MoveIt velocity scaling [0.0 - 1.0]

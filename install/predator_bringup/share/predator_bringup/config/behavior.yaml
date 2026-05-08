@@ -2,5 +2,8 @@ behavior_manager:
   ros__parameters:
     acquire_confidence_threshold: 0.6   # Confidence needed to transition SEARCH → ACQUIRE
     lost_confidence_threshold: 0.2      # Below this → REACQUIRE
+    acquire_stable_duration_s: 1.5      # Seconds of stable confidence before PURSUIT
     reacquire_timeout_s: 3.0            # Seconds in REACQUIRE before falling back to SEARCH
+    herd_distance_threshold_m: 1.2      # Distance to UR3 zone to trigger HERD (x2 used in code)
     state_publish_rate_hz: 10.0         # How often to publish behavior state
+    gesture_publish_rate_hz: 2.0        # How often to publish gesture requests

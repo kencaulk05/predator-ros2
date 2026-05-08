@@ -102,6 +102,10 @@ class BehaviorManager(Node):
         self._target_point       = Point()
         self._target_available   = False
 
+        # Predicted target position (updated from /predicted_target_pose_map)
+        self._predicted_point    = Point()
+        self._predicted_available = False
+
         # Track when we first exceeded acquire threshold (for stable duration)
         self._acquire_start_time = None
 
@@ -120,6 +124,8 @@ class BehaviorManager(Node):
             Float32,     "/target_confidence", self._confidence_cb, 10)
         self.create_subscription(
             PoseStamped, "/target_pose_map",        self._target_pose_cb, 10)
+        self.create_subscription(
+            PoseStamped, "/predicted_target_pose_map", self._predicted_pose_cb, 10)
         self.create_subscription(
             ZoneStatus,  "/zone_status",        self._zone_cb,       10)
         self.create_subscription(
@@ -153,6 +159,12 @@ class BehaviorManager(Node):
         self._target_point.y = msg.pose.position.y
         self._target_point.z = msg.pose.position.z
         self._target_available = True
+
+    def _predicted_pose_cb(self, msg: PoseStamped):
+        self._predicted_point.x = msg.pose.position.x
+        self._predicted_point.y = msg.pose.position.y
+        self._predicted_point.z = msg.pose.position.z
+        self._predicted_available = True
 
     def _zone_cb(self, msg: ZoneStatus):
         self._in_ur3_zone      = msg.target_in_ur3_zone
@@ -191,7 +203,9 @@ class BehaviorManager(Node):
 
         # ── Priority 4: Leave ARM_ALERT if target exits zone ─────────────────
         if self._state == ARM_ALERT:
-            if not self._in_ur3_zone:
+            # Minimum 2.0s dwell in ARM_ALERT before allowing exit
+            # This prevents rapid bouncing and gives arm time to move
+            if not self._in_ur3_zone and self._time_in_state() > 2.0:
                 return PURSUIT, "target left UR3 zone — resuming pursuit"
 
         # ── Priority 5: Tracking lost ─────────────────────────────────────────
@@ -258,12 +272,17 @@ class BehaviorManager(Node):
     def _gesture_tick(self):
         """
         Publish gesture requests appropriate for current state.
-        Only publishes when state changes to avoid spamming the arm.
+        POINT gestures are always republished so the arm tracks the moving target.
+        Other gestures only republish when state or gesture type changes.
         """
         gesture_type, urgency = self._gesture_for_state()
 
-        # Only republish if state changed or gesture type changed
-        if (self._state == self._last_gesture_state and
+        # Always republish POINT so arm tracks moving target
+        is_point = (gesture_type == GESTURE_POINT)
+
+        # Skip if nothing changed (except for POINT which always updates)
+        if (not is_point and
+                self._state == self._last_gesture_state and
                 gesture_type == self._last_gesture_type):
             return
 
@@ -271,7 +290,11 @@ class BehaviorManager(Node):
         req.header.stamp = self.get_clock().now().to_msg()
         req.gesture_type = gesture_type
         req.urgency      = float(urgency)
-        req.target_point = self._target_point
+        # Use predicted position for POINT so arm leads the target
+        if is_point and self._predicted_available:
+            req.target_point = self._predicted_point
+        else:
+            req.target_point = self._target_point
         self._pub_gesture.publish(req)
 
         self._last_gesture_type  = gesture_type

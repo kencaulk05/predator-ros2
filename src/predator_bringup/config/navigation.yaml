@@ -17,11 +17,11 @@ pursuit_planner_node:
     herding_offset_m: 0.80    # How far behind target (opposite UR3 side) [m]
 
     # Standby position (center of bottom corridor)
-    standby_x: 1.40           # m
-    standby_y: 0.90           # m
+    standby_x: 2.75           # m
+    standby_y: 1.80           # m
 
     # Map bounds for goal clamping
     map_x_min: 0.10
     map_x_max: 6.00
     map_y_min: 0.10
-    map_y_max: 3.36
+    map_y_max: 3.46

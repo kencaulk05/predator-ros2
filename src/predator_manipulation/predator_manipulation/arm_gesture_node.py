@@ -12,8 +12,8 @@ Publications:
   /gesture_status           (std_msgs/String)
 
 Parameters:
-  velocity_scale            (float, default=0.3)
-  acceleration_scale        (float, default=0.3)
+  velocity_scale            (float, default=0.6)
+  acceleration_scale        (float, default=0.5)
 
 IMPORTANT: Requires CycloneDDS to be active:
   export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
@@ -108,6 +108,7 @@ class ArmGestureController(Node):
         self._current_gesture      = GESTURE_NONE
         self._predicted_target_pos = None
         self._executing            = False
+        self._last_point_time      = 0.0   # time of last POINT execution
 
         # ── Publisher ─────────────────────────────────────────────────────
         self._pub_status = self.create_publisher(String, "/gesture_status", 10)
@@ -135,14 +136,9 @@ class ArmGestureController(Node):
             return
 
         if self._executing:
-            # Allow POINT to interrupt only if already executing POINT
-            if msg.gesture_type == GESTURE_POINT and                self._current_gesture == GESTURE_POINT:
-                self.get_logger().info("Updating POINT target.")
-                self._executing = False
-            else:
-                self.get_logger().warn(
-                    "Gesture request ignored — still executing previous gesture.")
-                return
+            self.get_logger().warn(
+                "Gesture request ignored — still executing previous gesture.")
+            return
 
         self._current_gesture = msg.gesture_type
         label   = GESTURE_LABELS.get(msg.gesture_type, "UNKNOWN")
@@ -176,10 +172,17 @@ class ArmGestureController(Node):
                 target = self._predicted_target_pos
 
             if target is not None:
+                # Rate limit POINT gestures — don't flood MoveIt
+                now = self.get_clock().now().nanoseconds * 1e-9
+                if now - self._last_point_time < 3.0:
+                    self.get_logger().info(
+                        "POINT rate limited — waiting for arm to settle.",
+                        )
+                    self._publish_status(label)
+                    return
+                self._last_point_time = now
+
                 # Convert map frame → UR3 base_link frame
-                # UR3 is at map (0.0, 1.29), facing +X in map = +Y in base_link
-                # base_link frame: +X = forward (into arena = map +X)
-                #                  +Y = left (map +Y direction)
                 target = self._map_to_base_link(target)
                 point_pose = self._compute_point_pose(target)
                 if point_pose is not None:
@@ -206,8 +209,8 @@ class ArmGestureController(Node):
 
         request = MotionPlanRequest()
         request.group_name                    = "ur_manipulator"
-        request.num_planning_attempts         = 10
-        request.allowed_planning_time         = 5.0
+        request.num_planning_attempts         = 20
+        request.allowed_planning_time         = 10.0
         request.max_velocity_scaling_factor   = float(velocity)
         request.max_acceleration_scaling_factor = float(acceleration)
         request.workspace_parameters.header.frame_id = "base_link"
@@ -223,8 +226,8 @@ class ArmGestureController(Node):
             jc                = JointConstraint()
             jc.joint_name     = joint_name
             jc.position       = angle
-            jc.tolerance_above = 0.01
-            jc.tolerance_below = 0.01
+            jc.tolerance_above = 0.05
+            jc.tolerance_below = 0.05
             jc.weight          = 1.0
             constraints.joint_constraints.append(jc)
 
@@ -283,7 +286,7 @@ class ArmGestureController(Node):
         # UR3 base position in map frame
         UR3_MAP_X = 0.0
         UR3_MAP_Y = 1.29
-        UR3_BASE_HEIGHT = 0.9  # height of arm base above floor in meters
+        UR3_BASE_HEIGHT = 1.25  # height of arm base above floor in meters (measured)
 
         mx, my, mz = target_map
 

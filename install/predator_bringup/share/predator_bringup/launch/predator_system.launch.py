@@ -83,6 +83,15 @@ def generate_launch_description():
             parameters=[cfg('zones.yaml'), {'use_sim_time': use_sim_time}],
             arguments=['--ros-args', '--log-level', log_level],
         ),
+
+        Node(
+            package='predator_perception',
+            executable='camera_to_map_transform_node',
+            name='camera_to_map_transform',
+            output='screen',
+            parameters=[cfg('perception.yaml'), {'use_sim_time': use_sim_time}],
+            arguments=['--ros-args', '--log-level', log_level],
+        ),
     ])
 
     # ─────────────────────────────────────────────────────────────────────

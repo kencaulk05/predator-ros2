@@ -28,7 +28,7 @@ class SafetySupervisor(Node):
 
         self._pub = self.create_publisher(Bool, "/safety_status", 10)
 
-        self.create_subscription(PoseStamped, "/target_pose",       self.callback_pose,       10)
+        self.create_subscription(PoseStamped, "/target_pose_map",   self.callback_pose,       10)
         self.create_subscription(Float32,     "/target_confidence", self.callback_confidence, 10)
 
         self.create_timer(1.0 / rate, self._monitor_cb)
@@ -45,8 +45,10 @@ class SafetySupervisor(Node):
     def callback_pose(self, msg: PoseStamped):
         self._last_pose_time = Time.from_msg(msg.header.stamp).nanoseconds * 1e-9
 
+        # Compute distance from UR3 arm position in map frame
+        UR3_X, UR3_Y = 0.0, 1.29
         p = msg.pose.position
-        self._target_distance = float(np.linalg.norm([p.x, p.y, p.z]))
+        self._target_distance = float(np.linalg.norm([p.x - UR3_X, p.y - UR3_Y]))
 
     def _monitor_cb(self):
         unsafe, reason = self._check_safety()

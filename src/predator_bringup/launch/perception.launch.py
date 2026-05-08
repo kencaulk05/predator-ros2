@@ -105,12 +105,25 @@ def generate_launch_description():
         arguments=['--ros-args', '--log-level', log_level],
     )
 
+    camera_to_map_transform = Node(
+        package='predator_perception',
+        executable='camera_to_map_transform_node',
+        name='camera_to_map_transform',
+        output='screen',
+        parameters=[
+            PathJoinSubstitution([config_dir, 'config', 'perception.yaml']),
+            {'use_sim_time': use_sim_time},
+        ],
+        arguments=['--ros-args', '--log-level', log_level],
+    )
+
     return LaunchDescription([
         use_sim_time_arg,
         log_level_arg,
         camera_device_arg,
-        camera,           # camera must start before tracker
+        camera,                    # camera must start before tracker
         target_tracker,
         velocity_estimator,
         zone_monitor,
+        camera_to_map_transform,   # must start after target_tracker
     ])

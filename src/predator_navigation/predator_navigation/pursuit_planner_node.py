@@ -71,10 +71,10 @@ class PursuitPlannerNode(Node):
     ROBOT_STANDBY_Y  = 1.80   # m — standby y (center of bottom corridor)
 
     # Map bounds for clamping goals
-    MAP_X_MIN = 0.30
-    MAP_X_MAX = 2.50
-    MAP_Y_MIN = 0.40
-    MAP_Y_MAX = 1.80
+    MAP_X_MIN = 0.20
+    MAP_X_MAX = 2.80
+    MAP_Y_MIN = 0.20
+    MAP_Y_MAX = 2.20
 
     def __init__(self):
         super().__init__('pursuit_planner_node')
