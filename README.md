@@ -125,7 +125,7 @@ ros2 launch ur_moveit_config ur_moveit.launch.py ur_type:=ur3e robot_ip:=10.3.4.
 source ~/Ros2_predator-project_WS/install/setup.bash
 ros2 launch nav2_bringup bringup_launch.py \
   use_sim_time:=false \
-  params_file:=$HOME/nav2_params.yaml \
+  params_file:=$HOME//Ros2_predator-project_WS/src/predator_bringup/config/nav2_params.yaml \
   map:=$HOME/Ros2_predator-project_WS/src/predator_bringup/maps/arena_map.yaml
 ```
 
