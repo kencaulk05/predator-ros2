@@ -8,7 +8,7 @@ A Predator-inspired robot system that detects humans via ArUco markers, herds th
 ## System Overview
 
 ```
-USB Camera (wall-mounted)
+USB Camera ("wall-mounted")
     ↓ ArUco detection
 target_tracker_node  →  /target_pose (camera frame)
     ↓
