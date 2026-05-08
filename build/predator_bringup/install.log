@@ -7,6 +7,7 @@
 /home/roboticslab/Ros2_predator-project_WS/install/predator_bringup/share/predator_bringup/config/safety.yaml
 /home/roboticslab/Ros2_predator-project_WS/install/predator_bringup/share/predator_bringup/config/manipulation.yaml
 /home/roboticslab/Ros2_predator-project_WS/install/predator_bringup/share/predator_bringup/config/navigation.yaml
+/home/roboticslab/Ros2_predator-project_WS/install/predator_bringup/share/predator_bringup/config/nav2_params.yaml
 /home/roboticslab/Ros2_predator-project_WS/install/predator_bringup/share/predator_bringup/config/zones.yaml
 /home/roboticslab/Ros2_predator-project_WS/install/predator_bringup/share/predator_bringup/config/behavior.yaml
 /home/roboticslab/Ros2_predator-project_WS/install/predator_bringup/share/predator_bringup/config/perception.yaml

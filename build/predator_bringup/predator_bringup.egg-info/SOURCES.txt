@@ -9,6 +9,7 @@ setup.py
 ../../build/predator_bringup/predator_bringup.egg-info/zip-safe
 config/behavior.yaml
 config/manipulation.yaml
+config/nav2_params.yaml
 config/navigation.yaml
 config/perception.yaml
 config/safety.yaml

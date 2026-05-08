@@ -58,6 +58,15 @@ def generate_launch_description():
         LogInfo(msg='[predator_bringup] Starting perception nodes...'),
 
         Node(
+            package='v4l2_camera',
+            executable='v4l2_camera_node',
+            name='v4l2_camera',
+            output='screen',
+            parameters=[cfg('perception.yaml'), {'use_sim_time': use_sim_time}],
+            arguments=['--ros-args', '--log-level', log_level],
+        ),
+
+        Node(
             package='predator_perception',
             executable='target_tracker_node',
             name='target_tracker',
@@ -134,19 +143,18 @@ def generate_launch_description():
             arguments=['--ros-args', '--log-level', log_level],
         ),
 
-        # TODO: uncomment when Nav2 map + params are ready
-        # IncludeLaunchDescription(
-        #     PythonLaunchDescriptionSource([
-        #         PathJoinSubstitution([
-        #             FindPackageShare('nav2_bringup'), 'launch', 'bringup_launch.py'
-        #         ])
-        #     ]),
-        #     launch_arguments={
-        #         'map': PathJoinSubstitution([bringup_share, 'maps', 'arena.yaml']),
-        #         'use_sim_time': use_sim_time,
-        #         'params_file': cfg('nav2_params.yaml'),
-        #     }.items(),
-        # ),
+        IncludeLaunchDescription(
+            PythonLaunchDescriptionSource([
+                PathJoinSubstitution([
+                    FindPackageShare('nav2_bringup'), 'launch', 'bringup_launch.py'
+                ])
+            ]),
+            launch_arguments={
+                'map': PathJoinSubstitution([bringup_share, 'maps', 'arena_map.yaml']),
+                'use_sim_time': use_sim_time,
+                'params_file': PathJoinSubstitution([bringup_share, 'config', 'nav2_params.yaml']),
+            }.items(),
+        ),
     ])
 
     # ─────────────────────────────────────────────────────────────────────
