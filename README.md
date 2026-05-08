@@ -1,5 +1,5 @@
 # Predator — Biomimetic Surveillance Robot
-### ROS 2 Kilted | Tufts EECS Robotics Final Project
+### ROS 2 Kilted | CS-150 Intro to ROS2
 
 A Predator-inspired robot system that detects humans via ArUco markers, herds them toward a stationary UR3e robotic arm using a Turtlebot 2 Kobuki, and performs expressive threat gestures when the target enters the interaction zone.
 
@@ -70,7 +70,15 @@ source install/setup.bash
 
 ## Launch Instructions
 
-### Step 1 — Turtlebot 2 (on turtle-one laptop, ROS 2 Foxy)
+```bash
+#Tutorial - Turtlebot 2
+documentation link: Turtlebot tutorial: https://docs.google.com/document/d/1Kw_JVrSo9lak-vepSjTjmib_KBXwqYstHOnxjuZmc70/edit?usp=sharing
+
+#Tutorial - Ur3 arm
+documentation link: Ur3 tutorial: https://docs.google.com/document/d/1TIIi-UZ_CYYCgizXtyPkHD_mAFIHL6pIckP7bZw3JlU/edit?tab=t.0#heading=h.acsicofp790u
+```
+
+### Step 1 — Turtlebot 2 (SSH to turtle-one laptop, ROS 2 Foxy ---> ROS2 Kilted)
 ```bash
 # Terminal 1 — Kobuki base
 ros2 launch turtlebot2_bringup kobuki.launch.py
